@@ -1,0 +1,30 @@
+[0m12:37:14.118832 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86A769550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F8685DC050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86BB03C50>]}
+
+
+============================== 12:37:14.125287 | e20580ce-1757-44ab-b4d5-10e75b029dfa ==============================
+[0m12:37:14.125287 [info ] [MainThread]: Running with dbt=1.11.2
+[0m12:37:14.127424 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Maireg\\.dbt', 'invocation_command': 'dbt init medical_warehouse', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m12:37:14.163291 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Maireg\.dbt
+[0m12:37:14.167840 [debug] [MainThread]: Starter project path: C:\Users\Maireg\Documents\GitHub\Telegram-Medical-Pipeline\venv\Lib\site-packages\dbt\include\starter_project
+[0m12:37:14.191072 [info ] [MainThread]: 
+Your new dbt project "medical_warehouse" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m12:37:14.192846 [info ] [MainThread]: Setting up your profile.
+[0m12:38:48.956546 [info ] [MainThread]: Profile medical_warehouse written to C:\Users\Maireg\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m12:38:48.958525 [debug] [MainThread]: Command `dbt init` succeeded at 12:38:48.958343 after 94.99 seconds
+[0m12:38:48.958994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86CC51E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86CCA5D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86B953BD0>]}
+[0m12:38:48.959479 [debug] [MainThread]: Flushing usage events
+[0m12:38:52.039941 [debug] [MainThread]: An error was encountered while trying to flush usage events
