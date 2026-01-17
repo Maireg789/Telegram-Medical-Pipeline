@@ -15,28 +15,6 @@ The pipeline follows a Data Lakehouse approach:
 3.  **Transform:** **dbt** cleans and models the data into a Star Schema.
 4.  **Enrich:** (In Progress) YOLOv8 performs object detection on product images.
 5.  **Serve:** (In Progress) FastAPI exposes analytics to the frontend.
-
-### Database Schema (Star Schema)
-```mermaid
-erDiagram
-    dim_channels ||--|{ fct_messages : "has many"
-    
-    dim_channels {
-        string channel_key PK
-        string channel_name
-        timestamp first_seen
-        int total_messages
-        float avg_views
-    }
-
-    fct_messages {
-        int message_id PK
-        string channel_key FK
-        timestamp message_date
-        text message_text
-        int view_count
-        boolean has_media
-    }
 📂 Project Structure
 Telegram-Medical-Pipeline/
 ├── data/                       # Data Lake (GitIgnored)
@@ -53,7 +31,6 @@ Telegram-Medical-Pipeline/
 ├── .env                        # API Keys & Secrets (GitIgnored)
 ├── docker-compose.yml          # Database Orchestration
 ├── requirements.txt            # Python Dependencies
-└── Interim_Report.md           # Detailed Architecture Report
 🚀 Setup & Usage
 1. Prerequisites
 Docker Desktop
