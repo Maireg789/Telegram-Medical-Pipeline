@@ -28,3 +28,33 @@ Happy modeling!
 [0m12:38:48.958994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86CC51E00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86CCA5D90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F86B953BD0>]}
 [0m12:38:48.959479 [debug] [MainThread]: Flushing usage events
 [0m12:38:52.039941 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:33:27.841240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B3342A9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B33211C050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B335633C50>]}
+
+
+============================== 22:33:27.849218 | 71a932fb-e1f2-4054-913f-aa2f4ad3bd79 ==============================
+[0m22:33:27.849218 [info ] [MainThread]: Running with dbt=1.11.2
+[0m22:33:27.850495 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Maireg\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:33:27.851648 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Maireg\Documents\GitHub\Telegram-Medical-Pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:33:27.853349 [debug] [MainThread]: Command `dbt run` failed at 22:33:27.853182 after 0.21 seconds
+[0m22:33:27.853849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B33562A8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B33551EC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B335487680>]}
+[0m22:33:27.854322 [debug] [MainThread]: Flushing usage events
+[0m22:33:30.190089 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:34:14.059537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B2839550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B06AC050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B3BD3C50>]}
+
+
+============================== 22:34:14.065877 | cea802ef-cade-4b88-9d01-c5cf1bf5fae1 ==============================
+[0m22:34:14.065877 [info ] [MainThread]: Running with dbt=1.11.2
+[0m22:34:14.066831 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Maireg\\.dbt', 'invocation_command': 'dbt run', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m22:34:14.067408 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Maireg\Documents\GitHub\Telegram-Medical-Pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m22:34:14.068711 [debug] [MainThread]: Command `dbt run` failed at 22:34:14.068571 after 0.20 seconds
+[0m22:34:14.069080 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B3BCE8B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B3ABEC30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000219B3A27680>]}
+[0m22:34:14.069499 [debug] [MainThread]: Flushing usage events
+[0m22:34:15.970209 [debug] [MainThread]: An error was encountered while trying to flush usage events
