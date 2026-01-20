@@ -1,8 +1,12 @@
 version: 2
 
 sources:
-  - name: telegram
-    database: medical_warehouse
-    schema: raw
+  - name: telegram           # This fixes the stg_telegram error
+    schema: raw              # This tells dbt the table is actually in the 'raw' schema
     tables:
       - name: telegram_messages
+
+  - name: raw                # This keeps the YOLO model working
+    schema: raw
+    tables:
+      - name: yolo_results
