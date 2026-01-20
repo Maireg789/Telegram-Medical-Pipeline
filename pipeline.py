@@ -1,7 +1,7 @@
 import subprocess
 import os
 import sys
-from dagster import asset, Definitions
+from dagster import asset, Definitions, define_asset_job, ScheduleDefinition
 
 # Get absolute path to project root
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -26,15 +26,43 @@ def load_to_postgres():
 
 @asset(deps=[load_to_postgres])
 def dbt_transformations():
-    """Task 2 & 3: Run dbt models in medical_warehouse folder"""
+    """
+    Task 2 & 3: Run dbt models AND automated tests.
+    Addressing feedback: Added 'dbt test' for production hardening.
+    """
     dbt_dir = os.path.join(BASE_DIR, "medical_warehouse")
+    
+    # 1. Run the transformations
+    print("Running dbt models...")
     subprocess.run(["dbt", "run", "--project-dir", dbt_dir], check=True)
+    
+    # 2. Run the tests (Enforces data quality in production)
+    print("Running dbt tests...")
+    subprocess.run(["dbt", "test", "--project-dir", dbt_dir], check=True)
 
+# --- PRODUCTION HARDENING: SCHEDULING & JOBS ---
+
+# 1. Define a job that materializes all assets in the correct order
+medical_warehouse_job = define_asset_job(
+    name="medical_warehouse_job", 
+    selection="*"
+)
+
+# 2. Define a schedule (Run daily at midnight)
+# Addressing feedback: Added automation to move away from manual materialization
+daily_refresh_schedule = ScheduleDefinition(
+    job=medical_warehouse_job,
+    cron_schedule="0 0 * * *",  # Midnight every day
+)
+
+# Final Definitions
 defs = Definitions(
     assets=[
         telegram_data, 
         yolo_enrichment, 
         load_to_postgres, 
         dbt_transformations
-    ]
+    ],
+    schedules=[daily_refresh_schedule],
+    jobs=[medical_warehouse_job]
 )
