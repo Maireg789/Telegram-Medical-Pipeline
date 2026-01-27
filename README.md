@@ -36,6 +36,7 @@ Telegram-Medical-Pipeline/
 ├── pipeline.py                 # Dagster Orchestration & Scheduling
 ├── docker-compose.yml          # PostgreSQL Orchestration
 └── requirements.txt            # Project Dependencies
+```
 
 ⚙️ Running the Pipeline
 
